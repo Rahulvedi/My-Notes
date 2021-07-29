@@ -1,0 +1,14 @@
+.notesArea{
+    width: 100vw;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,18rem);
+    justify-content: center;
+    
+}
+.addNotes{
+    height: 4rem;
+    width: 4rem;
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+}
