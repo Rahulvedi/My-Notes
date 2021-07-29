@@ -12,7 +12,7 @@ const DashBoard = () => {
         .orderBy("createdAt").onSnapshot(snapshot=>{
             setNotes(snapshot.docs.map(doc=>({id:doc.id,note:doc.data()})))
         })
-    },[])
+    },[currentUser.uid])
     console.log(Notes)
     return (
         <>
