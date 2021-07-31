@@ -60,7 +60,7 @@ const DashBoard = () => {
                 })}
             </div>)}
             <AddNotesBtn />
-            <Modal show={open} onHide={closeModal} className='pe-3'>
+            <Modal show={open} onHide={closeModal} >
                 <Modal.Body>
                     <h3 className='modalTitle'>{ModalDoc.title}</h3>
                     <p className='modalDesc'>{ModalDoc.desc}</p>

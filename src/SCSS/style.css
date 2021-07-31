@@ -161,6 +161,7 @@
 
 .modalDesc {
   padding: 5px;
+  word-wrap: break-word;
 }
 
 .description {
