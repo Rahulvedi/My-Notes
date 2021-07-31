@@ -2,6 +2,7 @@ import React,{useState} from 'react'
 import { database } from '../../../firebase'
 import {useAuth} from '../../../contexts/AuthContext'
 import {Form,Button,Modal} from 'react-bootstrap'
+import {RiPencilFill} from 'react-icons/ri'
 const AddNotesBtn = () => {
     const [open, setOpen] = useState(false)
     const [Title, setTitle] = useState('')
@@ -29,7 +30,7 @@ const AddNotesBtn = () => {
     }
     return (
         <div>
-            <Button className='addNotes' style={{ borderRadius: '50%', fontSize: '2rem' }} onClick={openModel}>+</Button>
+            <Button className='addNotes' style={{ borderRadius: '100%' }} onClick={openModel}><RiPencilFill/></Button>
             <Modal show={open} onHide={closeModel}>
                 <Form onSubmit={handleSave}>
                     <Modal.Body>

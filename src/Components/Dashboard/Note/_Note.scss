@@ -1,6 +1,9 @@
 .description{
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
     overflow: hidden;
-    text-overflow: ellipsis;
-    width: 14rem;
-    height: 6rem;
+}
+.title{
+    text-align: center;
 }

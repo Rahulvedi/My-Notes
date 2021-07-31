@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom'
 import {useAuth} from '../../../contexts/AuthContext'
 import { Form, FormControl, Button } from 'react-bootstrap'
 import { FaTimes, FaBars } from 'react-icons/fa'
-const NavBar = () => {
+const NavBar = ({handleSearch}) => {
     const [Click, setClick] = useState(false)
     let handleClick = (e) => {
         setClick(!Click)
+    }
+    function handleChange(e){
+       handleSearch(e.target.value)
     }
     const {logout}=useAuth()
     async function handleLogout(e){
@@ -26,6 +29,7 @@ const NavBar = () => {
                         placeholder="Search"
                         className="mr-2"
                         aria-label="Search"
+                        onChange={handleChange}
                     />
                     <Button variant="success" className='logoutBtn mx-2'  onClick={handleLogout}>LogOut</Button>
                 </Form>
