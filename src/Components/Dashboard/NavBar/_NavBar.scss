@@ -16,8 +16,8 @@
   max-width: 90rem;
   justify-content: space-between;
   @media screen and (max-width: 768px) {
-    padding-right: 1rem;
-    padding-left: 1rem;
+    padding-right: 0rem;
+    padding-left: 0rem;
   }
 }
 .NavLogo {
@@ -46,16 +46,27 @@
   display: flex;
 align-items: center;
 text-align: center;
-margin-bottom: 0;
 @media screen and (max-width:768px){
-  display: none;
   position: absolute;
+  right: 100%;
+  background-color: var(--color--primary);
   flex-direction: column;
   width: 100%;
-  top: 4rem;
+  top: 2.9rem;
   z-index: 10;
   background: #fff;
   transition: all 0.5s ease;
 }
+&_search{
+  max-width: 300px;
+  margin: 0 1rem;
+  @media screen and (max-width:768px) {
+    margin: 1rem 0;
+  }
 }
-
+}
+.navMenuOpen{
+  @media screen and (max-width:768px){
+    right: 0;
+  }
+}

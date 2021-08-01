@@ -4,6 +4,10 @@ import {useAuth} from '../../../contexts/AuthContext'
 import { Form, FormControl, Button } from 'react-bootstrap'
 import { FaTimes, FaBars } from 'react-icons/fa'
 const NavBar = ({handleSearch}) => {
+    // let navStyle={
+    //     background-color: #1B9CFC;
+    //     top: -8rem;
+    // }
     const [Click, setClick] = useState(false)
     let handleClick = (e) => {
         setClick(!Click)
@@ -23,16 +27,16 @@ const NavBar = ({handleSearch}) => {
                 <div className="mobileMenu">
                     {Click ? <FaTimes onClick={handleClick} /> : <FaBars onClick={handleClick} />}
                 </div>
-                <Form className="NavMenu">
+                <div className={Click?'NavMenu navMenuOpen':'NavMenu'} style={{backgroundColor:'#1B9CFC'}}  >
                     <FormControl
+                        className='NavMenu_search'
                         type="search"
                         placeholder="Search"
-                        className="mr-2"
                         aria-label="Search"
                         onChange={handleChange}
                     />
-                    <Button variant="success" className='logoutBtn mx-2'  onClick={handleLogout}>LogOut</Button>
-                </Form>
+                    <Button variant="success" className='logoutBtn'  onClick={handleLogout}>LogOut</Button>
+                </div>
             </div>
         </div>
 
