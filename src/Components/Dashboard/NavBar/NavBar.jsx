@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import {useAuth} from '../../../contexts/AuthContext'
-import { Form, FormControl, Button } from 'react-bootstrap'
+import {  FormControl, Button } from 'react-bootstrap'
 import { FaTimes, FaBars } from 'react-icons/fa'
 const NavBar = ({handleSearch}) => {
     // let navStyle={
